@@ -2,28 +2,34 @@ print(" BMW FACTORY INSPECTION SYSTEM ")
 print("===============================")
 
 
-def battery_check():
-    battery = int(input("Enter battery percentage: "))
+def battery_check(battery):
+
 
     if battery >= 80:
-        print("Battery Passed")
+        print("Battery is OK")
         return True
     else:
         print("Battery Failed")
         return False
 
-def engine_check():
-    engine = input("Enter engine status (good/bad): ")
+battery = int(input("Enter battery percentage: "))
+
+battery_ok = battery_check(battery)
+    
+
+def engine_check(engine):
+
 
     if engine.lower() == "good":
-        print("Engine Passed")
+        print("Engine is OK")
         return True
     else:
         print("Engine Failed")
         return False
 
-battery_ok = battery_check()
-engine_ok = engine_check()
+engine = input("Enter engine status (good/bad): ")
+
+engine_ok = engine_check(engine)
 
 if battery_ok and engine_ok:
     print("Vehicle Approved")
