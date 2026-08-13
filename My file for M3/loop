@@ -1,0 +1,5 @@
+inspection = "yes"
+
+while inspection == "yes":
+    print("bmw inspection running")
+    inspection = input("Inspect another bmw? (yes/no): ")

@@ -12,9 +12,7 @@ def battery_check(battery):
         print("Battery Failed")
         return False
 
-battery = int(input("Enter battery percentage: "))
 
-battery_ok = battery_check(battery)
     
 
 def engine_check(engine):
@@ -27,11 +25,31 @@ def engine_check(engine):
         print("Engine Failed")
         return False
 
-engine = input("Enter engine status (good/bad): ")
 
-engine_ok = engine_check(engine)
 
-if battery_ok and engine_ok:
-    print("Vehicle Approved")
-else:
-    print("Vehicle Failed Inspection")
+inspection = "yes"
+inspection_number = 1
+
+
+while inspection == "yes":
+
+
+    print(f"Inspection Number: {inspection_number}")
+
+    
+
+    battery = int(input("Enter battery percentage: "))
+    battery_ok = battery_check(battery)
+
+    engine = input("Enter engine status (good/bad): ")
+    engine_ok = engine_check(engine)
+
+    if battery_ok and engine_ok:
+        print("Vehicle Approved")
+    else:
+        print("Vehicle Failed Inspection")
+
+    inspection = input("Do you want to inspect another vehicle? (yes/no): ").lower()
+
+
+    inspection_number += 1
