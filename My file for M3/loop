@@ -1,5 +1,10 @@
-inspection = "yes"
+while True: 
 
-while inspection == "yes":
-    print("bmw inspection running")
-    inspection = input("Inspect another bmw? (yes/no): ")
+    command = input("Enter command (continue/stop): ")
+
+    if command.lower() == "stop":
+        break
+
+    print("BMW inspection continues...")
+
+    

@@ -36,6 +36,18 @@ while inspection == "yes":
 
     print(f"Inspection Number: {inspection_number}")
 
+    command = input("Press Enter to inspect or type 'emergency' to stop: ")
+
+    if command.lower() == "emergency":
+        print("🚨 EMERGENCY STOP — Inspection system stopped.")
+        break
+
+    if command.lower() == "skip":
+        print("⏭️ BMW inspection skipped.")
+        inspection_number += 1
+        continue
+
+
     
 
     battery = int(input("Enter battery percentage: "))
